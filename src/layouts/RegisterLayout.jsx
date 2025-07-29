@@ -80,6 +80,7 @@ function RegisterLayout() {
                         Accauntingiz yo'qmi?
                         <a href="#" className="link link-animated link-primary font-normal" onClick={() => setMain('signUp')}> Yaratish</a>
                     </p>
+                    <a href="/main/" className="link link-animated link-primary font-normal"> Demo ishlatish</a>
                     </div>
                 </div>
                 </div>
