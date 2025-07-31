@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { useGetBooks } from '../hooks/useGetBooks'
 import { useNavigate } from 'react-router-dom'
+import { GlobalContext } from '../context/GlobalContext'
 
 
 
 function Books() {
+  const {dispatch} = useContext(GlobalContext)
   const books = useGetBooks()
   const navigate = useNavigate()
   const [uiBooks, setUiBooks] = useState(books)
@@ -19,10 +21,11 @@ function Books() {
     })
     setUiBooks(searchet)
   }
-  
-  useEffect(() => {
-    // uiBooks = books;
-  }, [])
+
+  const selectBook = (book) => {
+    dispatch({type: "ADD_BOOK", payload: book})
+    navigate('/book/')
+  }
 
   return (
     <div className='h-full'>
@@ -46,7 +49,7 @@ function Books() {
       <ul role="list" className="divide-y divide-gray-200 dark:divide-gray-700">
         {uiBooks.length != 0 &&
           uiBooks.map(book => {
-            return <li key={book.id} className="py-3 sm:py-4 cursor-pointer">
+            return <li key={book.id} className="py-3 sm:py-4 cursor-pointer" onClick={() => selectBook(book)}>
             <div className="flex items-center">
               <div className="shrink-0">
                 <img src={`../books/${book.img}`} className="w-16" />

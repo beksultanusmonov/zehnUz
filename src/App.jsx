@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { createContext } from 'react'
 import { createBrowserRouter } from 'react-router'
 import RegisterLayout from './layouts/RegisterLayout'
 import { RouterProvider } from 'react-router-dom'
@@ -11,6 +11,11 @@ import Profil from './pages/Profil'
 import Notification from './pages/Notification'
 import Group from './pages/Group'
 import Book from './pages/Book'
+
+
+export const Context = createContext();
+
+
 function App() {
   const routes = createBrowserRouter([
     {
@@ -44,11 +49,11 @@ function App() {
       element: <Group />
     },
     {
-      path: 'book/:id',
+      path: 'book/',
       element: <Book />
     },
     {
-      path: 'chat/:id',
+      path: 'chat/',
       element: <ChatLayout />
     },
     {

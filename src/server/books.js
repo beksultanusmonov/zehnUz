@@ -1,4 +1,4 @@
-const books = [
+const DataApi = [
     {id: 1, name: "Ikki eshik orasi", author: "O'tkir Hoshimov", img: 'ikki-eshik-orasi.jpg', about: "Rost bilan yolg'onning  o'rtasi - to'rt enlik, degan gap bor. Gap shundaki ko'z bilan quloqning orasi - to'rt enlik ekan. Eshitganingga emas, ko'rganingga ishon... Maqsad - Shu."},
     {id: 2, name: "O'tkan kunlar", author: "Abdulla Qodiriy", img: 'otkan-kunlar.jpg', about: "o'zbeklar turmushidan tarixiy ro'mon"},
     {id: 3, name: "Ibtido", author: "Den Braun", img: 'ibtido.jpg', about: '"biz qayerdan paydo bo\'lganmiz?" Va "kelajakda bizni Nima kutmoqda?" Savollariga javob beradi asar qahramon'},
@@ -11,8 +11,3 @@ const books = [
     {id: 10, name: "Maymunlar sayyorasi", author: "Pyer Bul", img: 'maymunlar-sayyorasi.jpg', about: `inson aql-idrokidan ayrilganda butun borliq qanday o'zgarib ketishi haqida so'zlaydigan asar.`},
 ]
 
-
-
-export const useGetBooks = () => {
-    return books;
-}

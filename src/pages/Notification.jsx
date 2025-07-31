@@ -3,7 +3,8 @@ import React from 'react'
 function Notification() {
   return (
     <div>
-      Notification
+      Hammasi joyida ! <br />
+      Sizga bildirishnomalar mavjud emas !
     </div>
   )
 }

@@ -6,7 +6,7 @@ function RegisterLayout() {
   return (
     <div>
         {main == 'signUp' &&
-        <div className="flex h-auto min-h-screen items-center justify-center overflow-x-hidden bg-cover bg-center bg-no-repeat py-10">
+        <div className="flex h-auto min-h-screen items-center justify-center overflow-x-hidden bg-cover bg-center bg-no-repeat pt-2">
             <div className="relative flex items-center justify-center px-4 sm:px-6 lg:px-8">
                 <div className="bg-base-100 shadow-base-300/20 z-1 w-full space-y-6 rounded-xl p-6 shadow-md sm:min-w-md lg:p-8">
                     <div className="flex items-center gap-3">
@@ -20,19 +20,27 @@ function RegisterLayout() {
                     <form className="mb-4 space-y-4" onsubmit="return false;">
                         <div>
                             <label className="label-text" for="userName">Ism Familiya:</label>
-                            <input type="text" placeholder="Ism va Familiyangiz...." className="input w-full" required />
+                            <input type="text" placeholder="Ism va Familiyangiz...." className="input input-primary w-full" required />
                         </div>
                         <div>
                             <label className="label-text" for="userEmail">Email:</label>
-                            <input type="email" placeholder="Emailingiz..." className="input w-full" required />
+                            <input type="email" placeholder="Emailingiz..." className="input input-primary w-full" required />
+                        </div>
+                        <div>
+                            <label className="label-text" for="userEmail">Tanlang:</label>
+                            <select defaultValue="Pick a text editor" className="select select-primary w-full">
+                                <option disabled={true}  >Bu profil rasmingiz uchun</option>
+                                <option>Erkak</option>
+                                <option>Ayol</option>
+                            </select>
                         </div>
                         <div>
                             <label className="label-text" for="userEmail">Parol:</label>
-                            <input type={viewPass == 'no' ? "password" : 'text'} placeholder="Parol yarating..." className="input w-full" required />
+                            <input type={viewPass == 'no' ? "password" : 'text'} placeholder="Parol yarating..." className="input input-primary w-full" required />
                         </div>
                         <div>
                             <label className="label-text" for="userEmail">Tasdiq Parol:</label>
-                            <input type={viewPass == 'no' ? "password" : 'text'} placeholder="Parolingizni qayta yozing..." className="input w-full" required />
+                            <input type={viewPass == 'no' ? "password" : 'text'} placeholder="Parolingizni qayta yozing..." className="input input-primary w-full" required />
                         </div>
                         <div className="flex gap-2">
                             <input type="checkbox" className="w-10" checked={viewPass != 'no' ? true : false } onClick={() => setViewPass( viewPass == 'no' ? 'yes' : 'no')} />
