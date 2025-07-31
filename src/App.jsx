@@ -9,6 +9,8 @@ import Books from './pages/Books'
 import Groups from './pages/Groups'
 import Profil from './pages/Profil'
 import Notification from './pages/Notification'
+import Group from './pages/Group'
+import Book from './pages/Book'
 function App() {
   const routes = createBrowserRouter([
     {
@@ -36,6 +38,14 @@ function App() {
           element: <Notification />
         },
       ]
+    },
+    {
+      path: 'group/',
+      element: <Group />
+    },
+    {
+      path: 'book/:id',
+      element: <Book />
     },
     {
       path: 'chat/:id',

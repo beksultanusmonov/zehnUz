@@ -18,6 +18,12 @@ body{
 .f-c-b{
   color: blue;
 }
+.f-b{
+  border: 1px solid #2fa38c;
+}
+.f-b-b{
+  border-bottom: 2px solid #2fa38c;
+}
 
 .bg-f-c{
   background-color: #2fa38c;
